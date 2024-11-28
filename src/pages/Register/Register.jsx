@@ -4,6 +4,8 @@ import "./Register.css";
 import "/src/Components/text-animation/style.css";
 import { changeTextLetter } from "../../Components/text-animation/main";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -11,6 +13,7 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
   const API_URL = 'http://localhost:3000';
+  const navigate = useNavigate();
   useEffect(() => {
     const animTexts = document.querySelectorAll(".animated-text");
 
@@ -31,6 +34,7 @@ const Register = () => {
       alert("As senhas não correspondem");
       return;
     }
+    try {
     const response = await axios.post(`${API_URL}/register`,
       {
         email: email,
@@ -39,6 +43,12 @@ const Register = () => {
       },
     );
     console.log(response)
+    navigate("/login");
+    alert("Cadastro realizado com sucesso.");
+    }catch(error){
+      console.error("Erro ao registrar:", error);
+      alert("Erro ao registrar. Tente novamente.");
+    }
   };
 
   return (
