@@ -1,0 +1,168 @@
+.marketplace {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 20px;
+  }
+
+  .info {
+    position: fixed;
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .info {
+    margin-right: 20px;
+  }
+
+  .products {
+    margin-left: 0px;
+    text-shadow: none;
+  }
+
+  .product-grid {
+    justify-content: center;
+    text-shadow: none;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .products {
+    flex: 1;
+    margin-left: 20px;
+  }
+
+  .product-grid {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-shadow: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 5px;
+    gap: 5px;
+  }
+
+  .info {
+    margin-right: 10px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #010326;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #E65A00;
+}
+
+.logout-button {
+  height: 30px;
+  width: 30px;
+  line-height: 40px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  text-shadow: none;
+  color: #E65A00;
+}
+
+.search-bar .icon {
+  margin-left: -35px;
+  color: #ddd;
+}
+
+.user-options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.user-icon-container {
+  margin-right: 20px;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.user-menu span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.info {
+  position: fixed;
+  background-color: #00a005;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.cart-icon-container .icon {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 25px;
+}
